@@ -38,8 +38,8 @@ jobs:
     - name: Deploy to EC2
       run: |
         ssh -i "pem.pem" -o StrictHostKeyChecking=no ubuntu@ec2-34-224-27-126.compute-1.amazonaws.com << 'EOF'
-        docker pull luvisjostonj/fastapi:v1
-        docker stop your_container_name || true
-        docker rm your_container_name || true
-        docker run -d --name joston -p 8000:8000 luvisjostonj/fastapi:v1
+        sudo docker pull luvisjostonj/fastapi:v1
+        sudo docker stop your_container_name || true
+        sudo docker rm your_container_name || true
+        sudo docker run -d --name joston -p 8000:8000 luvisjostonj/fastapi:v1
         EOF
