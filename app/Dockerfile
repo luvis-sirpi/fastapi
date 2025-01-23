@@ -6,4 +6,4 @@ RUN pip install uvicorn
 RUN pip install passlib
 RUN pip install jinja2
 RUN pip install python-multipart
-CMD ["python","main.py"]
+ENTRYPOINT ["python","main.py"]
