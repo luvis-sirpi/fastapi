@@ -7,4 +7,4 @@ RUN pip install passlib
 RUN pip install jinja2
 RUN pip install python-multipart
 EXPOSE 8000
-CMD ["uvicorn", "main.py", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python","main.py"]
