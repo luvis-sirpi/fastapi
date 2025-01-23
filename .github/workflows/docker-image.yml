@@ -35,7 +35,7 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
-    - name: Deploy to EC2
+    - name: Deploy to EC2!
       run: |
         ssh -o StrictHostKeyChecking=no ec2-user@ec2-34-224-27-126.compute-1.amazonaws.com << 'EOF'
         docker pull luvisjostonj/fastapi:v1
