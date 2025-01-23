@@ -26,7 +26,7 @@ jobs:
       run: |
         docker build . --file app/Dockerfile --tag luvisjostonj/fastapi:v1
         docker push luvisjostonj/fastapi:v1
-        1
+
     - name: Log out from Docker Hub
       run: docker logout
 
