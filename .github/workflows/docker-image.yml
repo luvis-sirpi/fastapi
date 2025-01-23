@@ -24,8 +24,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build . --file Dockerfile --tag luvisjostonj/fastapi:$(date +%s)
+        docker build . --file app/Dockerfile --tag luvisjostonj/fastapi:$(date +%s)
         docker push your_dockerhub_username/fastapi:$(date +%s)
-        
+        1
     - name: Log out from Docker Hub
       run: docker logout
