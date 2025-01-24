@@ -36,7 +36,7 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -i "pem.pem" -o StrictHostKeyChecking=no ubuntu@ec2-34-224-27-126.compute-1.amazonaws.com << 'EOF'
+        ssh -i ${{ secrets.EC2_SSH_KEY }} -o StrictHostKeyChecking=no ubuntu@ec2-34-224-27-126.compute-1.amazonaws.com << 'EOF'
         sudo docker pull luvisjostonj/fastapi:v2
         sudo docker stop joston || true
         sudo docker rm joston || true
